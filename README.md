@@ -1,0 +1,2 @@
+# ASPNETCore7-REST_API-SqlServer-EFCore-Migrations-Postman_ChamadosSuporte
+Exemplo de API REST criada com o .NET 7 + ASP.NET Core para cadastramento e consulta de chamados de suporte usando SQL Server + Entity Framework + Migrations (configurações). Inclui validações com FluentValidation, Dockerfile para geração de imagens da aplicação e testes em JavaScript com Postman (para execução de uma Collection via Newman).
