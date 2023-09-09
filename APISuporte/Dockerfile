@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:7.0.305 AS build-env
+FROM mcr.microsoft.com/dotnet/sdk:7.0.400 AS build-env
 WORKDIR /app
 
 # Copiar csproj e restaurar dependencias
@@ -10,7 +10,7 @@ COPY . ./
 RUN dotnet publish -c Release -o out
 
 # Build da imagem
-FROM mcr.microsoft.com/dotnet/aspnet:7.0.8
+FROM mcr.microsoft.com/dotnet/aspnet:7.0.10
 WORKDIR /app
 COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "APISuporte.dll"]
